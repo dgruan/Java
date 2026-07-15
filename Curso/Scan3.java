@@ -9,9 +9,9 @@ public class Main
 		
 		System.out.print("Digite o seu nome: ");
 	    String nome = sc.nextLine();
-	    System.out.print("\nDigite seu salário por hora: ");
+	    System.out.print("Digite seu salário por hora: ");
 	    double salHora = sc.nextDouble();
-	    System.out.print("\nDigite a quantidade de horas trabalhadas por mês: ");
+	    System.out.print("Digite a quantidade de horas trabalhadas por mês: ");
 	    int horas = sc.nextInt();
 	    
 	    salMes = salHora * horas;
