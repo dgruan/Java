@@ -16,5 +16,6 @@ public class exercicios {
 		
 		System.out.printf("SOMA: %d", soma);
 		
+		sc.close();
 	}
 }
