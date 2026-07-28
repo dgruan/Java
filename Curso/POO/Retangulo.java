@@ -8,24 +8,23 @@ public class Main
 	    rectangle rectangle = new rectangle();
 	    
 	    System.out.println("Digite a base do retangulo: ");
-	    rectangle.width = nextDouble();
+	    rectangle.width = sc.nextDouble();
 	    
 	    System.out.println("Digite a altura do retangulo: ");
-	    rectangle.height = nextDouble();
+	    rectangle.height = sc.nextDouble();
 	    
-	    System.out.println("AREA: " + rectangle.area);
-	    System.out.println("PERIMETER: " + rectangle.perimeter);
-	    System.out.println("DIAGONAL: " + rectangle.diagonal);
+	    System.out.println("AREA: " + rectangle.area(rectangle.widht, rectangle.height));
+	    System.out.println("PERIMETER: " + rectangle.perimeter(rectangle.widht, rectangle.height));
+	    System.out.println("DIAGONAL: " + rectangle.diagonal(rectangle.widht, rectangle.height));
 	}
 }
 
 public class rectangle {
     
     double width, height;
-    double area, perimeter, diagonal;
     
-    area = width/height;
-    perimeter = (width+height) * 2;
-    diagonal = Math.sqrt(Math.pow(widht, 2) + Math.pow(height, 2));
+    double area = width/height;
+    double perimeter = (width+height) * 2;
+    double diagonal = Math.sqrt(Math.pow(widht, 2) + Math.pow(height, 2));
     
 }
