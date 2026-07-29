@@ -6,7 +6,7 @@ public class Employee {
         return grossSalary - tax;
     }
     
-    void percentage(double percentage) {
-        
+    void increaseSalary(double percentage) {
+        grossSalary += (grossSalary * percentage) / 100;
     }
 }
