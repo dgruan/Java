@@ -16,11 +16,12 @@ public class Main
 		System.out.print("Tax: ");
 		employee.tax = sc.nextDouble();
 		
-		System.out.print(employee.name + ", $ " + employee.netSalary());
+		System.out.println(employee.name + ", $ " + employee.netSalary());
 		
-		System.out.print("Which percentage to increase salary? ");
+		System.out.println("Which percentage to increase salary? ");
 		percentage = sc.nextDouble();
-		
+
+		System.out.print("Updated data: " + employee.name + ", $ " + employee.grossSalary);
 		
 	}
 }
