@@ -6,6 +6,8 @@ public class Main
 	    Scanner sc = new Scanner(System.in);
 	    Locale.setDefault(Locale.US);
 	    Employee employee = new Employee();
+	    
+	    double percentage;
         
 		System.out.print("Name: ");
 		employee.name = sc.nextLine();
@@ -15,5 +17,10 @@ public class Main
 		employee.tax = sc.nextDouble();
 		
 		System.out.print(employee.name + ", $ " + employee.netSalary());
+		
+		System.out.print("Which percentage to increase salary? ");
+		percentage = sc.nextDouble();
+		
+		
 	}
 }
