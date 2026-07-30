@@ -1,5 +1,11 @@
+package application;
+
 import java.util.Scanner;
+
+import entities.Employee;
+
 import java.util.Locale;
+
 public class Main
 {
 	public static void main(String[] args) {
@@ -18,10 +24,12 @@ public class Main
 		
 		System.out.println(employee.name + ", $ " + employee.netSalary());
 		
-		System.out.println("Which percentage to increase salary? ");
+		System.out.print("Which percentage to increase salary? ");
 		percentage = sc.nextDouble();
 
-		System.out.print("Updated data: " + employee.name + ", $ " + employee.grossSalary);
+		employee.increaseSalary(percentage);
+		
+		System.out.print("Updated data: " + employee.name + ", $ " + employee.netSalary());
 		
 	}
 }
