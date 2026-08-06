@@ -2,6 +2,7 @@ package application;
 
 import java.util.Scanner;
 import java.util.Locale;
+import bo.CurrencyConverter;
 
 public class Main
 {
@@ -9,15 +10,18 @@ public class Main
 	    
         double dollar;
         double dollarBought;
-	    
+        
+        Locale.setDefault(Locale.US);
 	    Scanner sc = new Scanner(System.in);
-	    Locale.setDefault(Locale.US);
 	    
 	    System.out.print("What is the dollar price? ");
 	    dollar = sc.nextDouble();
 	    System.out.print("How many dollars will be bought? ");
 	    dollarBought = sc.nextDouble();
-	    System.out.print("Amount to be paid in reais = ");
+	    
+	    double totalPay = CurrencyConverter.amountToBePaid(dollar, dollarBought);
+	    
+	    System.out.printf("Amount to be paid in reais = %.2f", totalPay);
 	    
 	    sc.close();
 	}
