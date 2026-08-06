@@ -1,19 +1,25 @@
 package com.mycompany.prj_calculadoraeqseggrau_poo1;
 
+import com.mycompany.prj_calculadoraeqseggrau_poo1.bo.CalculoEqSegGrau;
+import com.mycompany.prj_calculadoraeqseggrau_poo1.models.DadosEntrada;
+import com.mycompany.prj_calculadoraeqseggrau_poo1.models.DadosSaida;
+
 public class Prj_CalculadoraEqSegGrau_POO1 {
 
     public static void main(String[] args) {
-        double a = 1;
-        double b = 5;
-        double c = 6;
         
-        double delta = (b*b) - 4*a*c;
+        DadosEntrada de = new DadosEntrada();
         
-        double x1L = (-b + Math.sqrt(delta)) / (2*a);
-        double x2L = (-b - Math.sqrt(delta)) / (2*a);
+        de.setA(1);
+        de.setB(5);
+        de.setC(6);
         
-        System.out.println("O valor de delta eh: " + delta);
-        System.out.println("O valor de x': " + x1L);
-        System.out.println("O valor de x'': " + x2L);
+        CalculoEqSegGrau esg = new CalculoEqSegGrau();
+        
+        DadosSaida ds = esg.calcularDelta(de);
+        ds = esg.calcularX1L(de);
+        
+        System.out.println("Delta: " + ds.getDelta());
+        System.out.println("");
     }
 }
